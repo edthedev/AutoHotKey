@@ -33,16 +33,57 @@
 
 Return
 
+; Water looking up.
+^!e::
+	; Step left, look up and act
+	Sleep 250
+	send {a down}
+	Sleep 350
+	send {a up}
+
+	send {w down}
+	Sleep 100
+	send {w up}
+
+	send {c down} ; act
+	Sleep 250
+	send {c up}
+
+	; Step left, look up and act
+	Sleep 250
+	send {a down}
+	Sleep 350
+	send {a up}
+
+	send {w down}
+	Sleep 100
+	send {w up}
+
+	send {c down} ; act
+	Sleep 250
+	send {c up}
+
+	; Step left, look up and act
+	Sleep 250
+	send {a down}
+	Sleep 350
+	send {a up}
+
+	send {w down}
+	Sleep 100
+	send {w up}
+
+	send {c down} ; act
+	Sleep 250
+	send {c up}
+Return
+
+; Water walking left.
 ^!w::
 	; Step left, look up and act
-	Sleep 250
 	send {a down}
-	Sleep 350
+	Sleep 150
 	send {a up}
-
-	send {w down}
-	Sleep 100
-	send {w up}
 
 	send {c down} ; act
 	Sleep 250
@@ -51,12 +92,8 @@ Return
 	; Step left, look up and act
 	Sleep 250
 	send {a down}
-	Sleep 350
+	Sleep 330
 	send {a up}
-
-	send {w down}
-	Sleep 100
-	send {w up}
 
 	send {c down} ; act
 	Sleep 250
@@ -65,12 +102,8 @@ Return
 	; Step left, look up and act
 	Sleep 250
 	send {a down}
-	Sleep 350
+	Sleep 330
 	send {a up}
-
-	send {w down}
-	Sleep 100
-	send {w up}
 
 	send {c down} ; act
 	Sleep 250
