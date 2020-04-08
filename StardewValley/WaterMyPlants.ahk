@@ -36,7 +36,7 @@ Return
 ^!1::
 	; Step left and act
 	send {a down}
-	Sleep 300
+	Sleep 350
 	send {a up}
 	send {c down} ; act
 	Sleep 250
@@ -45,7 +45,7 @@ Return
 
 	; Step left and act
 	send {a down}
-	Sleep 300
+	Sleep 350
 	send {a up}
 	send {c down} ; act
 	Sleep 250
@@ -54,7 +54,7 @@ Return
 
 	; Step left and act
 	send {a down}
-	Sleep 300
+	Sleep 350
 	send {a up}
 	send {c down} ; act
 	Sleep 250
