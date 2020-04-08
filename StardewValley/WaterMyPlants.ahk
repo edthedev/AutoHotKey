@@ -33,16 +33,46 @@
 
 Return
 
-^!d::
+^!1::
+	; Step left and act
+	send {a down}
+	Sleep 300
+	send {a up}
+	send {c down} ; act
+	Sleep 250
+	send {c up}
+	Sleep 250
+
+	; Step left and act
+	send {a down}
+	Sleep 300
+	send {a up}
+	send {c down} ; act
+	Sleep 250
+	send {c up}
+	Sleep 250
+
+	; Step left and act
+	send {a down}
+	Sleep 300
+	send {a up}
+	send {c down} ; act
+	Sleep 250
+	send {c up}
+	Sleep 250
+Return
+
+^!2::
+	; Step 10 to the left
+	send {a down}
+	Sleep 2000
+	send {a up}
+Return
+
+^!3::
 	; Step 3 to the right
 	send {d down}
-	Sleep 2500
+	Sleep 350
 	send {d up}
 Return
 
-^!a::
-	; Step 10 to the left
-	send {a down}
-	Sleep 4000
-	send {a up}
-Return
