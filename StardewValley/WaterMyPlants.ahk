@@ -1,6 +1,6 @@
 
 ; ctrl + alt + w 
-^!w::
+^!9::
 
 	MouseGetPos, xpos, ypos  ;Save initial position of mouse
 
@@ -33,36 +33,59 @@
 
 Return
 
-^!1::
-	; Step left and act
+^!w::
+	; Step left, look up and act
+	Sleep 250
 	send {a down}
 	Sleep 350
 	send {a up}
-	send {c down} ; act
-	Sleep 250
-	send {c up}
-	Sleep 250
 
-	; Step left and act
-	send {a down}
-	Sleep 350
-	send {a up}
-	send {c down} ; act
-	Sleep 250
-	send {c up}
-	Sleep 250
+	send {w down}
+	Sleep 100
+	send {w up}
 
-	; Step left and act
-	send {a down}
-	Sleep 350
-	send {a up}
 	send {c down} ; act
 	Sleep 250
 	send {c up}
+
+	; Step left, look up and act
 	Sleep 250
+	send {a down}
+	Sleep 350
+	send {a up}
+
+	send {w down}
+	Sleep 100
+	send {w up}
+
+	send {c down} ; act
+	Sleep 250
+	send {c up}
+
+	; Step left, look up and act
+	Sleep 250
+	send {a down}
+	Sleep 350
+	send {a up}
+
+	send {w down}
+	Sleep 100
+	send {w up}
+
+	send {c down} ; act
+	Sleep 250
+	send {c up}
 Return
 
-^!6::
+
+^!f::
+	send {c down} ; act
+	Sleep 1030 ; MAX! Fishing cast
+	send {c up}
+Return
+
+
+^!g::
 	send {c down} ; act
 	Sleep 5000
 	send {c up}
