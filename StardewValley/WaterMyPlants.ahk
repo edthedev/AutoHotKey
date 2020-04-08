@@ -62,11 +62,10 @@ Return
 	Sleep 250
 Return
 
-^!2::
-	; Step 10 to the left
-	send {a down}
-	Sleep 2000
-	send {a up}
+^!6::
+	send {c down} ; act
+	Sleep 5000
+	send {c up}
 Return
 
 ^!3::
