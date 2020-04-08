@@ -1,4 +1,14 @@
 
+
+
+; Pressing pause will stop it
+^!q::
+	BreakLoop = 1
+Pause::
+	BreakLoop = 1
+return
+
+
 ; ctrl + alt + w 
 ^!9::
 
@@ -34,80 +44,56 @@
 Return
 
 ; Water looking up.
+
 ^!e::
-	; Step left, look up and act
-	Sleep 250
-	send {a down}
-	Sleep 350
-	send {a up}
+	BreakLoop = 0
+	Loop
+	{
+		if (BreakLoop = 1)
+		{
+			BreakLoop = 0
+			break
+		}
 
-	send {w down}
-	Sleep 100
-	send {w up}
+		; Step left, look up and act
+		Sleep 250
+		send {a down}
+		Sleep 350
+		send {a up}
 
-	send {c down} ; act
-	Sleep 250
-	send {c up}
+		send {w down}
+		Sleep 100
+		send {w up}
 
-	; Step left, look up and act
-	Sleep 250
-	send {a down}
-	Sleep 350
-	send {a up}
+		send {c down} ; act
+		Sleep 250
+		send {c up}
 
-	send {w down}
-	Sleep 100
-	send {w up}
-
-	send {c down} ; act
-	Sleep 250
-	send {c up}
-
-	; Step left, look up and act
-	Sleep 250
-	send {a down}
-	Sleep 350
-	send {a up}
-
-	send {w down}
-	Sleep 100
-	send {w up}
-
-	send {c down} ; act
-	Sleep 250
-	send {c up}
+	}
 Return
+
 
 ; Water walking left.
 ^!w::
-	; Step left, look up and act
-	send {a down}
-	Sleep 150
-	send {a up}
+	BreakLoop = 0
+	Loop
+	{
+		if (BreakLoop = 1)
+		{
+			BreakLoop = 0
+			break
+		}
 
-	send {c down} ; act
-	Sleep 250
-	send {c up}
+		; Step left, look up and act
+		send {a down}
+		Sleep 150
+		send {a up}
 
-	; Step left, look up and act
-	Sleep 250
-	send {a down}
-	Sleep 330
-	send {a up}
+		send {c down} ; act
+		Sleep 250
+		send {c up}
+	}
 
-	send {c down} ; act
-	Sleep 250
-	send {c up}
-
-	; Step left, look up and act
-	Sleep 250
-	send {a down}
-	Sleep 330
-	send {a up}
-
-	send {c down} ; act
-	Sleep 250
-	send {c up}
 Return
 
 
@@ -118,10 +104,12 @@ Return
 Return
 
 
-^!g::
+^!v::
 	send {c down} ; act
-	Sleep 5000
-	send {c up}
+Return
+
+^!c::
+	send {c up} ; act
 Return
 
 ^!3::
