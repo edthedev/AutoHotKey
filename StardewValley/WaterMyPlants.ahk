@@ -73,7 +73,7 @@ Return
 Return
 
 
-; Water walking left.
+; Watering
 ^!w::
 	BreakLoop = 0
 	Loop
@@ -84,14 +84,10 @@ Return
 			break
 		}
 
-		; Step left, look up and act
-		send {a down}
-		Sleep 150
-		send {a up}
-
 		send {c down} ; act
 		Sleep 250
 		send {c up}
+		Sleep 250
 	}
 
 Return
