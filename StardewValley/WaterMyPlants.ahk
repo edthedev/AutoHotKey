@@ -1,10 +1,8 @@
 
 
 
-; Pressing pause will stop it
+; Break loops on Q
 ^!q::
-	BreakLoop = 1
-Pause::
 	BreakLoop = 1
 return
 
@@ -87,7 +85,7 @@ Return
 		send {c down} ; act
 		Sleep 250
 		send {c up}
-		Sleep 250
+		Sleep 1000 ; Min of 1000 or sends too many commands too quick.
 	}
 
 Return
